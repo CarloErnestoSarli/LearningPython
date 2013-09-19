@@ -3,11 +3,14 @@ def displayIntro():
     print('Hi there! Who are you?')
     myName = input()
     print('Nice to meet you ,' + myName + '!')
+    time.sleep(1.5)
     print('My name is... Well that\'s not important right now. What\'s important is that')
+    time.sleep(1.5)
     print('I\'d like to aks you to join me in a little adventure...')
+    time.sleep(2)
 def letsStart():
     choice = ''
-    while choice != 'y' or choice != 'n': 
+    while choice != 'y' and choice != 'n': 
         print('Do you feel up to it?')
         print('y or n')
         choice = input()
@@ -23,8 +26,9 @@ def checkChoice(chosenChoice):
 playAgain = 'y'
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    choiceMade = chooseChoice()
-    checkChoice(choiceMade)          
+    choiceMade = letsStart()
+    checkChoice(choiceMade)
+    time.sleep(1)
     print('Would you like to change your mind?')
     playAgain = input()          
         
